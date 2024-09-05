@@ -1,0 +1,17 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Example: In src/assets/styles.css */
+/* @font-face {
+    font-family: 'Certia';
+    src: url('../src/assets/fonts/certia-font-family-1723532044-0/Befonts-License.txt') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  body {
+    font-family: 'Certia', sans-serif;
+  }
+   */

@@ -1,0 +1,1 @@
+export const CHANGE_LOADER='[mutations] change load spinner'

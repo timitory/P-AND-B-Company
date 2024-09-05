@@ -1,30 +1,41 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div>
+    <Navbar/>
+    
+  <transition name="fade" mode="out-in">
+    <router-view/>
+  </transition>
+  <Loading/>
+  <Collaborate/>  
+  <hr class="text-slate"/>
+  <Footer/>
+  <hr class="text-slate mx-16">
+  <h1 class="text-black text-center py-2">Copyright © 2024 Pixels and Brands. All Rights Reserved.</h1>
+
+</div>
 </template>
+<script>
+import Collaborate from './components/Collaborate.vue';
+import Footer from './components/Footer.vue';
+import Navbar from './components/Navbar/Navbar.vue';
+import Loading from './components/Loader.vue';
+export default{
+   components:{Navbar, Collaborate,Footer,Loading}
+}
+</script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@font-face {
+  font-family: 'Certia';
+
+  src: url('../src/assets/fonts/certia-font-family-1723532044-0/Certia-Regular-BF657672ec3ede3.otf') format('truetype');
+
+
+  font-weight: normal;
+  font-style: normal;
 }
 
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+body {
+  font-family: 'Certia', sans-serif;
 }
 </style>
